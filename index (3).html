@@ -1,21 +1,13 @@
-const display = document.getElementById("display");
+function calcularMedia(){
+    var nota1 = parseFloat(document.getElementById('n1').value)
+    var nota2 = parseFloat(document.getElementById('n2').value)
+    var nota3 = parseFloat(document.getElementById('n3').value)
+    var res = document.getElementById('res')
+    var media = (nota1 + nota2 + nota3) / 3
 
-function append(value) {
-    display.value += value;
-}
-
-function clearDisplay() {
-    display.value = "";
-}
-
-function deleteLast() {
-    display.value = display.value.slice(0, -1);
-}
-
-function calculate() {
-    try {
-        display.value = eval(display.value);
-    } catch {
-        display.value = "Erro";
+    if(media >= 7){
+        res.textContent = `${media.toFixed(2)} - PASSOU DE ANO 🦄`
+    }else{
+        res.textContent = `${media.toFixed(2)} - REPROVOU DE ANO 😿`
     }
 }

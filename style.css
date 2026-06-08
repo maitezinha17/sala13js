@@ -1,13 +1,35 @@
-function calcularMedia(){
-    var nota1 = parseFloat(document.getElementById('n1').value)
-    var nota2 = parseFloat(document.getElementById('n2').value)
-    var nota3 = parseFloat(document.getElementById('n3').value)
-    var res = document.getElementById('res')
-    var media = (nota1 + nota2 + nota3) / 3
+function somar(){
+    var n1 = document.getElementById("n1").valueAsNumber
+    var n2 = document.getElementById("n2").valueAsNumber 
+    var resp = document.getElementById("resposta")
+    resp.textContent = n1 + n2
+}
 
-    if(media >= 7){
-        res.textContent = `${media.toFixed(2)} - PASSOU DE ANO 🦄`
+
+function dividir(){
+    var n3 = parseFloat(document.getElementById("n3").value)
+    var n4 = parseFloat(document.getElementById("n4").value)
+    var resp = document.getElementById("respDiv")
+
+    if(n4 !== 0){
+        resp.textContent = (n3 / n4).toFixed(2)
     }else{
-        res.textContent = `${media.toFixed(2)} - REPROVOU DE ANO 😿`
+        resp.textContent = "Não se divide por 0"
     }
 }
+
+function mult(){
+    var n1 = document.getElementById("n5").valueAsNumber
+    var n2 = document.getElementById("n6").valueAsNumber 
+    var resp = document.getElementById("respMult")
+    resp.textContent = n1 * n2
+}
+
+function sub(){
+    var n1 = document.getElementById("n7").valueAsNumber
+    var n2 = document.getElementById("n8").valueAsNumber 
+    var resp = document.getElementById("respSub")
+    resp.textContent = n1 - n2
+}
+
+

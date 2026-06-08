@@ -1,70 +1,30 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    height: 100vh;
+h1{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    color: #ffffff;
+    font-size: 64px;
+    text-shadow: 0px 3px 15px #ffffff;
+}
+
+body{
+    padding-top: 80px;
+    background-image: url('../images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e1e2f, #3a3a5f);
-}
-
-.calculator {
-    width: 400px;
-    height: 600px;
-    background: #222;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    display: flex;
+    justify-content: center;
     flex-direction: column;
-}
-
-#display {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
-    font-size: 2em;
-    text-align: right;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background: #111;
-    color: #fff;
-}
-
-.buttons {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-button {
-    font-size: 1.5em;
-    border: none;
-    border-radius: 10px;
-    background: #444;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-button:hover {
-    background: #666;
-}
-
-.equal {
-    grid-row: span 2;
-    background: #ff9500;
-}
-
-.zero {
-    grid-column: span 2;
+    gap: 5vh;
 }
 
 nav{
@@ -90,4 +50,37 @@ a{
 a:hover{
     cursor: pointer;
     opacity: 1;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+input{
+    padding: 15px;
+    border-radius: 999px;
+    border: none;
+    border: 2px solid black;
+    box-shadow: 0px 3px 15px black;
+}
+
+button{
+    padding: 15px;
+    border-radius: 999px;
+    border: none;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 3px 15px black;
+    transition: all 200ms ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+     background-color: white;
+    color: black;
 }
